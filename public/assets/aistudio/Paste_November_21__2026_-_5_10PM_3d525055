@@ -1,0 +1,388 @@
+LINMAX
+MONETIZATION &
+SPONSORED STORIES
+Detailed Product Strategy, User Journeys, Payment Architecture,
+Administration, Analytics & AI Implementation Blueprint
+
+DOCUMENT PURPOSE  A detailed planning and implementation guide for adding sustainable revenue streams to Linmax while keeping essential messaging and community features accessible to users.
+
+Prepared for the Linmax product and development team
+ 
+Document guide
+•	1. Executive summary and platform context
+•	2. Monetization principles and revenue streams
+•	3. Linmax Pro subscriptions
+•	4. Creator and channel monetization
+•	5. Sponsored Stories advertising marketplace
+•	6. Advertiser journey and campaign creation
+•	7. Audience targeting and delivery rules
+•	8. Pricing, packages and budgeting
+•	9. Uganda-focused payment processing
+•	10. Story-feed user experience
+•	11. Admin moderation and campaign operations
+•	12. Analytics, reporting and billing records
+•	13. Data model and backend architecture
+•	14. Security, privacy, safety and compliance
+•	15. Notifications and customer support
+•	16. Development phases, testing and launch checklist
+•	17. Detailed AI builder implementation prompt
+ 
+1. Executive summary and platform context
+Linmax is a web-based messaging and community platform for personal conversations, groups and broadcast channels. Its product foundation includes unique +LM Chat Codes, real-time messaging, voice and video calls, group and channel tools, and 24-hour Stories. The monetization plan should build on these existing capabilities rather than create a disconnected product.
+The recommended business model is freemium plus business-to-business advertising. Basic texting, calls, groups and ordinary Stories should remain free so that users can join, invite others and build a healthy network. Revenue can then come from optional premium subscriptions, creator transactions and paid promotional placements.
+PRIMARY OPPORTUNITY  Sponsored Stories can give event promoters, businesses and organisations a self-service way to buy visibility inside Linmax Stories. The system should be transparent, measurable, moderated and privacy-conscious.
+
+1.1 Product foundations to preserve
+•	Linmax Chat Codes: unique +LM identifiers that help people connect without publicly sharing phone numbers.
+•	Real-time messaging: delivery and read states, replies, reactions, editing and forwarding.
+•	Voice and video calls: peer-to-peer calling with camera and mute controls.
+•	Groups and channels: roles, permissions, pinned messages, invite links, polls and moderation.
+•	Stories: temporary photo, video and text updates with audience privacy controls.
+1.2 Product principles
+•	Keep core communication free; charge for optional value, business tools and promotion.
+•	Do not place paid advertisements inside private message threads.
+•	Clearly identify paid content with a Sponsored label.
+•	Only distribute campaigns after payment verification and moderation approval.
+•	Give advertisers useful, honest metrics without exposing individual users' private information.
+•	Build controls so users are not overwhelmed by repetitive advertising.
+2. Monetization principles and revenue streams
+Linmax can develop several complementary revenue streams. They should be introduced in stages so that the platform does not add complexity before it has sufficient usage and operational capacity.
+Revenue stream	Who pays	What they receive	Business model
+Linmax Pro	Individuals and power users	Premium Chat Code options, expanded media limits, enhanced calling and optional verification features	Monthly or annual subscription; one-time fee for selected vanity codes if desired
+Paid VIP Channels	Channel subscribers	Access to creator or organisation content	Creator sets price; Linmax retains a disclosed platform commission
+Tips and virtual gifts	Followers and viewers	A way to support creators and send paid reactions	Transaction fee or platform share
+Sponsored Stories	Event promoters, businesses and organisations	Paid placement in eligible users' Stories feeds	Campaign-based pricing by duration, reach and targeting
+Business broadcast tools	Businesses and organisations	Opt-in promotional messaging and automated support tools	Subscription, usage-based fee or approved message bundle
+
+The original product proposal suggests a 10%–20% platform fee for paid VIP Channels. This should be configurable and shown clearly to creators before they enable paid access. The exact fee, taxes, payout timing and refund rules need to be defined before launch.
+3. Linmax Pro subscriptions
+Linmax Pro is an optional paid subscription for users who want additional customization, capacity or professional identity features. The free tier should continue to support ordinary messaging, calls, groups and basic Stories.
+3.1 Premium features
+Feature	Free experience	Linmax Pro experience
+Chat Codes	System-assigned +LM code	Option to request or purchase available memorable/vanity codes, subject to availability and rules
+Media and storage	Standard file size and storage limits	Higher upload limits and additional storage quota
+Video Stories	Standard duration limit	Longer video Stories within technical and safety limits
+Video calls	Standard supported quality	HD calling where network, device and infrastructure support it
+Verification	Ordinary account identity indicators	Optional paid application for an eligible business/public profile badge, subject to verification review
+
+3.2 Subscription management
+•	Show the current plan, price, renewal date, benefits and payment status in Settings.
+•	Allow users to upgrade, renew, cancel future renewal and view receipts.
+•	Explain that cancellation stops future billing but does not necessarily reverse a completed billing period.
+•	Use server-side subscription status checks to control premium entitlements.
+•	Handle failed renewals, grace periods, expired subscriptions and refunds consistently.
+•	Do not treat payment alone as proof of identity for a verification badge; verification must include a separate review process.
+4. Creator and channel monetization
+4.1 Paid VIP Channels
+Channel owners may choose to make selected content available to paying subscribers. A channel should remain discoverable with a clear description of what is free and what is paid. Users should see the price, billing interval, renewal terms and cancellation method before subscribing.
+1.	Creator sets a permitted subscription price and publishes the channel offer.
+2.	User reviews the offer and completes payment through an enabled provider.
+3.	Backend confirms the transaction and grants access to the paid channel.
+4.	Access is removed or changed when a subscription expires, is refunded or is cancelled according to the published terms.
+5.	Creator dashboard shows subscribers, gross revenue, platform fee, refunds and estimated payout.
+4.2 Tipping and virtual gifts
+Followers may send optional tips or purchase virtual gifts for creators. The interface must show the real-money price before the user confirms. Avoid confusing gift animations with free reactions. Keep a transaction ledger and provide clear receipts.
+FINANCIAL CONTROL  Define minimum and maximum transaction amounts, fraud checks, creator eligibility, chargeback handling, payout schedules and any applicable tax or regulatory obligations before enabling creator payouts.
+
+5. Sponsored Stories advertising marketplace
+Sponsored Stories is the primary advertising opportunity in this blueprint. It lets an advertiser pay Linmax to place an approved image or video promotion inside the Stories experience. Common examples include parties, concerts, club nights, product launches, restaurant offers, church events, school events and business announcements.
+5.1 Advertising products
+Option	Description	Important rule
+All-users campaign	Promote to the eligible Linmax audience within a chosen country or supported market.	Do not promise every account will see the ad; report actual eligible reach and delivery.
+Location-targeted campaign	Target a supported city, district or region, such as Mbarara or Kampala.	Use location only where the user has allowed relevant use or where a lawful, transparent basis exists.
+Selected +LM audience	Advertiser enters specific +LM codes for users they are entitled to reach.	Apply abuse controls; do not expose profile details or permit harassment or bulk unsolicited targeting.
+Creator collaboration	Advertiser requests a paid promotion from a creator who has opted into partnerships.	Creator must explicitly accept; never publish into another person's personal Stories without consent.
+
+5.2 Supported advertising content
+•	Static posters and flyers, such as party or concert announcements.
+•	Short promotional videos and business clips.
+•	Product, service, restaurant and retail promotions.
+•	Event announcements with date, venue, location and ticket or RSVP destination.
+•	A destination link, website, ticketing page or approved contact action.
+Recommended creative format is vertical 9:16 because it fits a full-screen Stories presentation. The platform should validate file type, file size, dimensions, duration and safety before accepting media. Exact limits should be configurable.
+6. Advertiser journey and campaign creation
+The campaign creation flow should be straightforward enough for a local event promoter using a mobile phone, while still collecting the information needed for payment, moderation and delivery.
+Open Advertise on Linmax: Advertiser enters from the profile menu, Settings, a business dashboard or a clearly labelled entry point. Explain what Sponsored Stories are and show a sample placement.
+Create campaign: Advertiser chooses a campaign name and category, such as Entertainment, Events, Food, Retail, Education or Community.
+Upload creative: Upload a poster, image or supported video. Show a preview in the actual Stories frame. Allow crop and reposition controls without distorting the original.
+Enter details: Collect headline, description, advertiser identity, event date/time where relevant, venue/location, contact method and destination URL.
+Choose a call to action: Examples include Learn More, Buy Tickets, Book Now, Register, Contact Us, WhatsApp Us or Visit Website. Validate links and show the destination before payment.
+Choose audience: Select all eligible users, a location, a supported audience segment or an approved creator collaboration. Display a genuine estimated audience only when backed by current data.
+Choose duration and budget: Select campaign length and review the price calculation, taxes/fees if applicable, estimated reach and any delivery limitations.
+Review and pay: Show a final summary with creative, audience, dates, budget, destination and terms. Create a pending-payment campaign and start checkout.
+Payment confirmation: Wait for the provider's verified server-side webhook or transaction lookup. Do not trust a browser redirect as proof of payment.
+Moderation review: After payment verification, queue the campaign for administrator review. If rejected, show the reason and the applicable refund or edit process.
+Schedule and publish: Once approved, schedule the campaign. Start the paid duration at the agreed activation time, not while it is waiting for review.
+Measure results: Show campaign delivery, unique viewers, impressions, completed views and CTA clicks using real event data.
+7. Audience targeting and delivery rules
+7.1 All-users reach
+An all-users campaign is intended to reach the eligible Linmax audience in the selected market. The backend should distribute the campaign to eligible accounts when they open or browse Stories. Users do not need to be online at the exact time the campaign is approved. The advertiser dashboard must distinguish estimated audience, eligible audience, delivered impressions and unique viewers.
+7.2 Location targeting
+Advertisers can choose supported locations such as a city or district. Location targeting should rely on a user-provided or appropriately permissioned location setting, not hidden or continuous tracking. If a reliable location signal is unavailable, the user should not be silently assigned to a precise location.
+7.3 Specific +LM codes
+The source proposal includes specific +LM user-code targeting. This must be designed carefully. A code list should only be accepted for legitimate, consent-based communication or another clearly permitted use. Add limits on list size, campaign frequency and repeated targeting; allow users to report or hide ads; and prevent advertisers from using this feature to harass individuals. Do not disclose whether a code belongs to a particular person unless the platform already permits that discovery.
+7.4 Creator or influencer placements
+Creator placements should be handled as opt-in partnerships. Creators can set whether they accept offers, review the advertiser, content, compensation and timing, and accept or decline. A campaign must not be inserted into a creator's personal Stories unless the creator explicitly agrees and the placement is clearly disclosed as sponsored.
+7.5 Delivery and frequency
+•	Use a controlled insertion rate so sponsored content does not overwhelm organic Stories.
+•	Set configurable per-user frequency caps for each campaign and advertiser.
+•	Avoid repeatedly showing the same campaign to a user who has dismissed it, where technically feasible.
+•	Do not send a push notification for every ad impression.
+•	Stop delivery when the campaign expires, is paused, is rejected or reaches a configured budget or impression cap.
+•	Use fair rotation when several campaigns target the same audience; define whether delivery is based on schedule, bid, priority or another disclosed rule.
+8. Pricing, packages and budgeting
+The uploaded proposal provides illustrative starting ranges. These are not guaranteed market prices. The administrator should be able to change rates as Linmax's active audience, delivery capacity and advertiser demand develop.
+Package / placement	Audience	Duration	Illustrative price from source
+All-Users Blast	All active/eligible Linmax users	24 / 48 / 72 hours	UGX 20,000–100,000+ per 24 hours; scales with active user base
+Targeted / Specific User Placement	Specific +LM codes, regions or selected influencer feeds	24 / 48 / 72 hours	UGX 5,000–25,000 per 24 hours depending on target size
+
+8.1 Pricing calculation
+A transparent price calculator can combine the following configurable elements:
+•	Base fee for the selected campaign duration.
+•	Audience size or geographic coverage multiplier.
+•	Premium placement fee, if offered.
+•	Creative review or production fee, only if Linmax actually provides that service.
+•	Applicable taxes and payment-provider charges, shown separately where required.
+•	Discounts or promotional credits, with an audit trail.
+8.2 Advertiser price preview
+Line item	Example display
+Placement	Location-targeted Story campaign
+Audience	Eligible users in selected city
+Duration	24 hours after activation
+Base campaign price	UGX [configured amount]
+Additional fees / taxes	UGX [calculated amount, if applicable]
+Total due	UGX [final amount]
+
+PRICING SAFEGUARD  Never hard-code the example prices into the user interface. Store price rules in an admin-managed configuration and record the exact price snapshot on each paid campaign.
+
+9. Uganda-focused payment processing
+The source proposal identifies Flutterwave, Pesapal and MarzPay as gateway options for MTN Mobile Money, Airtel Money and card payments. The development team must confirm current provider availability, supported payment methods, merchant onboarding requirements, fees, settlement timing and webhook behavior before selecting a provider.
+9.1 Payment sequence
+6.	Create a campaign record with payment_status = pending.
+7.	Create a unique payment reference on the server.
+8.	Initiate checkout with the selected provider from a secure backend endpoint.
+9.	Return the provider's checkout URL or payment instructions to the client.
+10.	Receive the provider callback/webhook on a protected backend endpoint.
+11.	Verify the signature and/or query the provider for authoritative transaction status.
+12.	Check reference, amount, currency and campaign association before marking paid.
+13.	Record the provider response and an immutable transaction event.
+14.	Move the campaign to pending_review only after payment is verified.
+9.2 Failure, duplicate and refund handling
+•	Treat duplicate webhooks idempotently; the same payment must not be credited twice.
+•	Keep failed, abandoned, pending and reversed payments distinct.
+•	Do not publish an ad if payment is unverified, reversed or refunded.
+•	Provide a clear refund policy for rejected campaigns, technical delivery failures and advertiser cancellations.
+•	Keep a record of who authorized a refund and why.
+•	Never place secret gateway keys in frontend code or public repositories.
+10. Story-feed user experience
+Sponsored Stories should appear within the existing Linmax Stories experience, not inside private message threads. They should feel consistent with the app's visual identity while remaining clearly distinguishable from ordinary user Stories.
+10.1 Sponsored Story presentation
+•	Use the same supported full-screen vertical canvas as ordinary Stories.
+•	Show a visible Sponsored label near the advertiser identity.
+•	Display the advertiser or business name and, where available, an approved profile image.
+•	Support image and video creative, playback controls and a clear close/skip action.
+•	Display the chosen call-to-action button with a safe, validated destination.
+•	Keep controls accessible and readable on small screens.
+•	Do not imitate private messages, system alerts or personal Stories in a misleading way.
+10.2 User controls
+•	Allow users to hide or dismiss a sponsored Story.
+•	Allow users to report misleading, offensive or suspicious advertising.
+•	Offer understandable advertising preference controls where personalization is used.
+•	Respect story privacy settings and account eligibility rules.
+•	Avoid excessive repetition through frequency caps and campaign rotation.
+11. Admin moderation and campaign operations
+The admin dashboard is the operational control centre. It should be available only to authorized staff with role-based permissions. The moderation queue should show paid campaigns awaiting review and make it easy to inspect the media, advertiser, destination, audience and schedule.
+11.1 Review actions
+Action	Expected behavior
+Approve	Mark approved and schedule or activate according to campaign start rules.
+Reject	Record a reason, notify advertiser and apply the published refund/edit policy.
+Request changes	Return the campaign to the advertiser for correction; do not publish until re-reviewed.
+Pause	Stop further delivery while preserving campaign history and metrics.
+Resume	Resume only if the campaign remains eligible, approved, paid and within its permitted period.
+Terminate	Stop a campaign for a serious policy or safety reason and record the administrator and reason.
+
+11.2 Moderation checklist
+•	Is the advertiser identifiable and contactable?
+•	Does the poster/video match the submitted title and description?
+•	Are event date, venue, price and claims presented honestly?
+•	Does the destination link work and lead to the described destination?
+•	Does the content comply with Linmax advertising rules and applicable law?
+•	Does the audience selection comply with privacy and anti-abuse controls?
+•	Is the creative legible and suitable for a vertical Story placement?
+11.3 Admin dashboard overview
+•	Campaign totals by status: pending payment, pending review, scheduled, active, completed and rejected.
+•	Review queue with filters for submission date, category, advertiser and campaign type.
+•	Payment ledger, provider reference, refunds and reconciliation status.
+•	Pricing and package configuration.
+•	Ad categories, content policies and supported targeting areas.
+•	Campaign delivery health, reports and audit logs.
+•	Staff roles and permission management.
+12. Analytics, reporting and billing records
+Advertisers should receive accurate, understandable reporting. Never display sample numbers as if they were real results. Use actual backend events and define each metric in the dashboard.
+Metric	Definition
+Impression	A qualifying display of the sponsored Story according to a documented measurement rule.
+Unique viewer	A distinct eligible account that generated at least one qualifying view during the campaign.
+Story completion	A view that reaches the defined completion threshold for the Story.
+CTA click	A click or tap on the campaign's call-to-action element.
+Video view	A play event meeting the platform's defined minimum view threshold.
+Click-through rate	CTA clicks divided by the selected impression denominator, expressed as a percentage.
+
+12.1 Advertiser report
+•	Campaign name, status, audience, placement and dates.
+•	Amount paid and payment reference.
+•	Total impressions and unique viewers.
+•	Video views and Story completions where relevant.
+•	CTA clicks and click-through rate.
+•	Daily performance trend.
+•	Downloadable report and receipt.
+12.2 Measurement safeguards
+Define whether an impression requires the Story to be visible for a minimum time or a certain percentage of the screen. Deduplicate unique viewers by campaign and account according to the chosen reporting period. Filter obvious automated traffic and protect metrics from accidental repeated taps. Do not expose a list of individual viewers to advertisers unless there is a separate, explicit and lawful reason to do so.
+13. Data model and backend architecture
+The uploaded source proposes PostgreSQL/Supabase tables named sponsored_stories and sponsored_story_metrics. The following expanded design retains those concepts and adds operational fields that a production implementation is likely to need. Adapt names to the existing Linmax schema.
+13.1 Core tables
+Table	Purpose / key fields
+advertisers	Advertiser profile linked to an authenticated user; business name, contact details, verification status and timestamps.
+sponsored_stories	Campaign record: advertiser_user_id, title, media_url, media_type, CTA, target_type, target_user_codes, duration_hours, amount_paid, currency, payment_reference, payment_status, approval_status, starts_at, expires_at, created_at.
+sponsored_story_metrics	Campaign measurement: ad_id, viewer_user_id, viewed_at, clicked_cta; enforce a suitable uniqueness rule for unique-view reporting.
+ad_payment_events	Immutable provider event log: campaign, provider, transaction reference, event type, amount, currency, verification result and timestamp.
+ad_reviews	Review decision, administrator, reason, notes and timestamp.
+ad_price_rules	Admin-managed package prices, durations, audience multipliers, currency and effective dates.
+ad_preferences	User-level advertising controls and muted categories, subject to the product's privacy design.
+ad_reports	User-submitted reports about a sponsored Story, reason, status and moderation outcome.
+
+13.2 Campaign status model
+Status area	Suggested values
+Payment	pending, paid, failed, refunded, reversed
+Approval	pending_review, approved, rejected, changes_requested
+Delivery	draft, scheduled, active, paused, completed, cancelled, terminated
+
+Keep payment, moderation and delivery states separate. A single status field can become confusing because a campaign can be paid but awaiting review, or approved but not yet scheduled. Enforce valid state transitions on the server.
+13.3 Security and database policies
+•	Use Row Level Security (RLS) so advertisers can read and manage only their own permitted campaigns.
+•	Only authorized admin roles can approve, reject, pause or terminate campaigns.
+•	Only trusted backend code can mark payments as paid or change verified payment records.
+•	Validate file uploads and store media in controlled storage with appropriate access rules.
+•	Protect +LM code targeting and user identifiers from unauthorized enumeration.
+•	Add indexes for campaign status, start/end time, target type and advertiser ID.
+•	Use idempotency keys for payment callbacks and delivery events.
+14. Security, privacy, safety and compliance
+Advertising must not weaken the privacy promise of Linmax. Advertisers buy placement and aggregate performance information, not access to private conversations, phone numbers, contact lists or hidden personal data.
+•	Do not use private messages, call content or private group content to target advertisements.
+•	Use transparent consent and preference controls for personalized advertising.
+•	Minimize personal data collected for campaign targeting and analytics.
+•	Protect payment data by relying on the payment provider's secure checkout and tokenization rather than storing card details.
+•	Validate URLs, scan uploads and restrict unsafe file types.
+•	Apply clear policies for prohibited, deceptive, fraudulent or unlawful promotions.
+•	Provide report, appeal and advertiser-support processes.
+•	Define retention periods for campaign records, payment logs and analytics.
+•	Review applicable Ugandan laws, data protection requirements, consumer rules, tax obligations and payment-provider terms with qualified advisers before launch.
+15. Notifications and customer support
+15.1 Advertiser notifications
+•	Payment initiated, successful, failed or refunded.
+•	Campaign submitted and awaiting review.
+•	Campaign approved, rejected or returned for changes.
+•	Campaign scheduled, started, paused or completed.
+•	Campaign approaching expiry, where useful.
+•	Campaign report ready.
+15.2 Administrator notifications
+•	New paid campaign awaiting moderation.
+•	Payment verification exception or provider mismatch.
+•	Campaign report or safety escalation.
+•	Unusual click/view activity or suspected fraud.
+Notifications should be useful and restrained. Do not send a push notification to every user merely because a sponsored Story has been added to their feed.
+16. Development phases, testing and launch checklist
+Phase	Scope	Completion criteria
+Phase 1: Foundation	Inspect existing Stories, authentication, database, storage and admin roles; agree product rules.	Architecture and requirements approved; no existing feature is broken.
+Phase 2: Advertiser flow	Campaign form, media upload, preview, audience selection, pricing and My Ads page.	Advertiser can create and review a draft campaign.
+Phase 3: Payments	Gateway checkout, webhook verification, transaction records and failure handling.	Only verified successful payments advance to moderation.
+Phase 4: Admin moderation	Review queue, approve/reject/request changes, scheduling and audit log.	Only approved and paid campaigns can be scheduled.
+Phase 5: Stories delivery	Fetch matching active campaigns, insert Sponsored Stories, enforce frequency caps.	Correct eligible users receive campaigns; others do not.
+Phase 6: Analytics	Impressions, unique viewers, CTA clicks, advertiser reports.	Dashboard metrics reconcile with backend events.
+Phase 7: Pro and creator tools	Subscriptions, VIP channels, gifts and creator payouts.	Entitlements, payments and payouts are tested end-to-end.
+Phase 8: Controlled launch	Pilot with a small number of advertisers and selected locations.	Support, moderation, payment reconciliation and delivery monitoring are operational.
+
+16.1 Essential test cases
+•	A campaign cannot publish before payment is verified.
+•	A campaign cannot publish before administrator approval.
+•	A duplicate payment webhook does not create duplicate payment credit.
+•	A rejected campaign is not delivered to any Story feed.
+•	A campaign starts and expires at the correct times, including timezone boundaries.
+•	An all-users campaign is returned only to eligible accounts in its configured market.
+•	A targeted campaign is returned only to users matching the approved targeting rules.
+•	A user cannot read another advertiser's private campaign or billing records.
+•	A user can hide or report a sponsored Story.
+•	Expired, paused, refunded or terminated campaigns stop delivery.
+•	Metrics do not count one unique viewer repeatedly as multiple unique viewers.
+•	Mobile and desktop Story layouts remain readable and usable.
+17. Detailed AI builder implementation prompt
+The following prompt can be copied into Lovable, Cursor or another AI coding assistant. It instructs the builder to inspect the existing Linmax project first and implement the feature in stages rather than replacing the app.
+PROJECT: Implement Linmax Monetization and Sponsored Stories.
+
+You are working on the existing Linmax web application. First inspect the current codebase, database schema, authentication, Stories feed, media storage, admin roles and payment integrations. Do not rebuild the application or replace existing functionality. Reuse the existing design system and components wherever possible.
+
+PRODUCT GOAL
+Add a production-oriented monetization system while keeping basic messaging, calls, groups and ordinary Stories free. The initial priority is Sponsored Stories: advertisers can pay to submit an image/video promotion that appears in the Stories feed of eligible users after payment verification and administrator approval.
+
+A. ADVERTISER EXPERIENCE
+Create an “Advertise on Linmax” entry point and a responsive advertiser dashboard. Include campaign totals, active/pending/completed campaigns, spend, impressions, unique viewers and CTA clicks. Add a “Create Advertisement” wizard with:
+- Upload image or video and preview it in the real Linmax Story frame.
+- Campaign title, category, description and advertiser identity.
+- Event date, venue and location where applicable.
+- CTA label and validated destination URL.
+- Audience: all eligible users, supported location targeting, or specific +LM codes subject to privacy and abuse safeguards.
+- Duration: 24, 48 or 72 hours, configurable by administrators.
+- Price calculation, campaign summary and payment checkout.
+- “My Ads” page with campaign status, dates, receipts and analytics.
+
+B. CAMPAIGN LIFECYCLE
+Keep payment, approval and delivery status separate. Suggested payment states: pending, paid, failed, refunded, reversed. Suggested approval states: pending_review, approved, rejected, changes_requested. Suggested delivery states: draft, scheduled, active, paused, completed, cancelled, terminated.
+A campaign must not be delivered unless payment is verified, moderation is approved, the schedule is active and the viewer matches the targeting rules. Start the paid duration at the agreed activation time so review delays do not consume the advertiser’s paid time.
+
+C. PAYMENT
+Support a configurable gateway integration. The product proposal identifies Flutterwave, Pesapal and MarzPay for Uganda-focused Mobile Money/card checkout; confirm provider support and merchant requirements before implementation. Initiate payments from the backend, verify signed webhooks or authoritative provider status, validate amount/currency/reference, make webhook handling idempotent, and keep an audit ledger. Never trust a frontend success redirect and never expose secret keys in browser code. Do not publish unpaid or unverified campaigns.
+
+D. ADMIN MODERATION
+Create a role-protected Admin Advertising area with pending-review queue, creative preview, advertiser details, targeting, dates, payment verification, approve, reject, request changes, pause, resume and terminate actions. Require a reason for rejection or termination. Record administrator ID, decision, timestamp and notes. Only approved, paid campaigns can be scheduled.
+
+E. STORIES INTEGRATION
+Inspect the existing Stories feed and insert Sponsored Stories without disrupting ordinary Stories or private chats. Display a clear Sponsored label, advertiser identity, media, CTA and close/skip control. Respect campaign start/end times, targeting, user eligibility and frequency caps. Avoid unsolicited push notifications for each impression. Provide hide and report controls.
+
+F. ANALYTICS
+Record qualified impressions, unique viewers, Story completions, video views and CTA clicks. Define metric rules and deduplicate unique viewers. Show real data only. Do not expose individual viewers' private details to advertisers. Provide a campaign report and receipt.
+
+G. DATABASE AND ACCESS CONTROL
+Use the existing database conventions. The original design proposes sponsored_stories and sponsored_story_metrics. Add or adapt tables for advertiser profiles, payment events, moderation reviews, pricing rules, preferences and reports as required. Add indexes and Row Level Security. Advertisers can access only their own campaigns and billing records. Only trusted server-side code can confirm payments. Only authorized administrators can moderate campaigns.
+
+H. OTHER REVENUE STREAMS
+Design the architecture so later phases can add:
+1. Linmax Pro: custom/vanity +LM Chat Codes, expanded media/storage limits, longer video Stories, HD calls where supported, and an optional verified profile application process.
+2. Paid VIP Channels: creator subscriptions with a configurable 10%–20% platform commission, clear renewal/cancellation terms and creator payout reporting.
+3. Tips and virtual gifts: paid creator support with clear prices, transaction ledger and fraud controls.
+4. Business broadcast tools: paid promotional/automated messages only to users who have opted in.
+
+I. PRIVACY, SAFETY AND QUALITY
+Do not use private message or call content for ad targeting. Do not disclose phone numbers, contact lists or private user data to advertisers. Validate media and destination links. Add frequency caps, ad reporting, moderation rules and an appeal/support path. Review applicable laws and provider terms before launch. Make all screens responsive and accessible.
+
+J. IMPLEMENTATION METHOD
+Work in small, testable stages. First report the current architecture and proposed changes. Then implement database migrations and access policies, advertiser flow, payment verification, admin moderation, Stories delivery and analytics. Add tests for payment failures, duplicate webhooks, targeting, permissions, campaign expiry and rejected ads. Preserve all existing Linmax features. Do not use fake statistics, mock successful payments or present non-functional buttons as complete. Clearly identify any required API credentials or external provider setup.
+Appendix A. Recommended launch decisions
+•	Choose one payment gateway for the first pilot after confirming merchant onboarding and Mobile Money support.
+•	Start with all-users and location-targeted campaigns; introduce specific +LM code targeting only after privacy and abuse controls are ready.
+•	Pilot with a small number of vetted advertisers and manually review every campaign.
+•	Use configurable pricing and review real delivery performance before publishing rate cards.
+•	Keep Sponsored Stories separate from private chat threads and clearly labelled.
+•	Launch Pro subscriptions and creator payouts after payment reconciliation and support operations are stable.
+Appendix B. Important definitions
+Term	Meaning
+Advertiser	A Linmax user or organization that submits and pays for a campaign.
+Campaign	A paid promotional placement with creative, audience, budget, schedule and status.
+Sponsored Story	A paid image or video promotion shown in the Stories experience and labelled Sponsored.
+Impression	A qualifying display event under Linmax's documented measurement rules.
+Unique viewer	A distinct account counted once for the defined campaign reporting period.
+CTA	Call to action: the button or link inviting a user to take the next step.
+Webhook	A server-to-server event sent by a payment provider to report transaction status.
+RLS	Row Level Security: database rules that restrict which records each user or role can access.
+
+
+FINAL PRODUCT DIRECTION  Build Sponsored Stories first as a carefully controlled advertising product. Keep the experience simple for local advertisers, transparent for users, measurable for businesses and manageable for Linmax administrators. Expand into subscriptions and creator monetization once the core payment and moderation operations are reliable.
+

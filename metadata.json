@@ -1,0 +1,6 @@
+{
+  "name": "Linmax — Connect Without Limits",
+  "description": "An advanced, modern, private messaging application featuring secure chats, stories, updates, crystal-clear voice and video calls, groups, channels, and unique Linmax Chat Codes.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
